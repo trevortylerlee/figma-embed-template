@@ -1,0 +1,32 @@
+---
+import "@/styles/global.css";
+
+import { SITE } from "@/siteConfig";
+
+import BaseHead from "@/components/BaseHead.astro";
+import SeoPage from "@/components/SeoPage.astro";
+---
+
+<html lang="en">
+  <BaseHead>
+    <SeoPage title={SITE.title} />
+  </BaseHead>
+  <body>
+    <iframe id="iframe" src={SITE.figmaSrc} allowfullscreen></iframe>
+  </body>
+</html>
+
+<style>
+  body {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  #iframe {
+    width: 100%;
+    height: 100%;
+  }
+</style>
